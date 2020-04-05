@@ -1,3 +1,13 @@
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">Coffee</string>
+    <string name="toppings" translatable="false">Toppings</string>
+    <string name="whipped_cream" translatable="false">Whipped cream</string>
+    <string name="chocolate" translatable="false">Chocolate</string>
+    <string name="coffee_cups" translatable="false">Number of coffee cups</string>
+    <string name="add" translatable="false">+</string>
+    <string name="startNumber" translatable="false">0</string>
+    <string name="minus" translatable="false">-</string>
+    <string name="order" translatable="false">ORDER</string>
+    <string name="thank_you" translatable="false">Thank You</string>
+    <string name="order_summary_name" translatable="false">Name: <xliff:g id="name" example="Sam">%S</xliff:g> </string>
 </resources>

@@ -3,18 +3,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:layout_marginLeft="16dp"
+    android:layout_marginTop="16dp"
     android:layout_marginRight="16dp"
     android:layout_marginBottom="16dp"
-    android:layout_marginTop="16dp"
+    android:orientation="vertical"
     tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/nameText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textCapWords"
+        android:hint="Name"/>
 
     <TextView
         android:id="@+id/toppingTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Toppings" />
+        style="@style/HeaderTextStyle"
+        android:text="@string/toppings" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,25 +29,43 @@
         android:orientation="horizontal">
 
         <CheckBox
+            android:id="@+id/whippedCreamCheckbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16sp"/>
+            android:textSize="16sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:layout_marginLeft="16dp"
-            android:text="Whipped cream"/>
+            android:text="@string/whipped_cream" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/chocolateCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="@string/chocolate" />
 
     </LinearLayout>
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Number of coffee cups" />
+        style="@style/HeaderTextStyle"
+        android:text="@string/coffee_cups" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -55,20 +79,20 @@
         android:layout_below="@+id/textView"
         android:layout_marginTop="16dp"
         android:onClick="increment"
-        android:text="+" />
+        android:text="@string/add" />
 
-    <TextView
-        android:id="@+id/quantityTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/incrementButton"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="16dp"
-        android:text="2"
-        android:textColor="#000000"
-        android:textSize="16sp" />
+        <TextView
+            android:id="@+id/quantityTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/incrementButton"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/startNumber"
+            android:textColor="#000000"
+            android:textSize="16sp" />
 
-    <Button
+        <Button
         android:id="@+id/decrementButton"
         android:layout_width="52dp"
         android:layout_height="42dp"
@@ -76,27 +100,28 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:onClick="decrement"
-        android:text="-" />
+            android:textColor="#000000"
+        android:text="@string/minus" />
 
 </LinearLayout>
 
-    <TextView
-        android:id="@+id/order_summary_text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/decrementButton"
-        android:layout_marginTop="16dp"
-        android:text="Order summary" />
+<!--    <TextView-->
+<!--        android:id="@+id/order_summary_text_view"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/decrementButton"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:text="Order summary" />-->
 
-    <TextView
-        android:id="@+id/summaryTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/order_summary_text_view"
-        android:layout_marginTop="16dp"
-        android:text="$10"
-        android:textColor="#000000"
-        android:textSize="16sp" />
+<!--    <TextView-->
+<!--        android:id="@+id/summaryTextView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/order_summary_text_view"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:text="$10"-->
+<!--        android:textColor="#000000"-->
+<!--        android:textSize="16sp" />-->
 
     <Button
         android:id="@+id/orderButton"
@@ -105,6 +130,6 @@
         android:layout_below="@+id/summaryTextView"
         android:layout_marginTop="16dp"
         android:onClick="submitOrder"
-        android:text="ORDER" />
+        android:text="@string/order" />
 
 </LinearLayout>
